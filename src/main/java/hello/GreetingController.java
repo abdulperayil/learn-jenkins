@@ -14,6 +14,7 @@ public class GreetingController {
     @RequestMapping("/greeting")
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
         // Auto build trigger
+        // Add another comment
         return new Greeting(counter.incrementAndGet(),
                             String.format(template, name));
     }
